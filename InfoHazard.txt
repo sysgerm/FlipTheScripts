@@ -1,3 +1,4 @@
+REM Author: SysGerm @ CosmodiumCS
 GUI r
 DELAY 500
 STRING cmd.exe
