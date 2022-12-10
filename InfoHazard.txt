@@ -1,7 +1,7 @@
 REM Author: SysGerm @ CosmodiumCS
 GUI r
 DELAY 500
-STRING cmd.exe
+STRING C:\Windows\System32\cmd.exe
 ENTER
 DELAY 500
 STRING cd %HOMEPATH%
